@@ -1,7 +1,5 @@
 import p from '../variables/preguntas.json'
 import {estudios, fortalezas} from '../variables/respuestas'
-import style from '../stylesComponents/inicio.module.css';
-import yo from '../img/yo.PNG'
 import { useState } from 'react';
 import BurbujaEscribiedo from './burbujaEscribiendo';
 import BurbujaChat from './burbujaChat';
@@ -26,7 +24,6 @@ export default function BotonesPreguntas(){
             setTimeout(() => {
                 respuesta(str)
                 setFetching(false)
-                setPreg(false)
             }, 2000)
         return (
             <BurbujaEscribiedo/>
@@ -39,7 +36,7 @@ export default function BotonesPreguntas(){
         if(str === "¿Que hay de tus estudios?"){
             setResp(true)
             setTexto(estudios)
-            // mostrarPreguntas()
+            
         }
         else if(str === "3 fortalezas"){
             setResp(true)
@@ -49,6 +46,17 @@ export default function BotonesPreguntas(){
         
     }
 
+    function preguntass(){
+        if(preg){
+            p.preguntas.map((pr, i) => {
+                if(pr.estado){
+                    return <input type="button" className="btn btn-outline-secondary" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)} style={{margin:10}}/>
+                }
+            })
+            
+        } 
+    }
+
     return(
         <div className=''>
             {preg && p.preguntas.map((pr, i) => {
@@ -56,7 +64,6 @@ export default function BotonesPreguntas(){
                     return <input type="button" className="btn btn-outline-secondary" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)} style={{margin:10}}/>
                 }
             })}
-            {/* <button type="button" class="btn btn-outline-secondary" style={{margin:10}}>{estudios2}</button> */}
             {cargando()}
             {resp ? <BurbujaChat str={texto}/>: null}
         </div>
