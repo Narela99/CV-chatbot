@@ -1,0 +1,41 @@
+.burbujas{
+    width: 90%;
+    background-color: rgb(129, 176, 204);
+    border-radius: 10px;
+}
+
+.burbujasCargando{
+    
+    background-color: rgb(129, 176, 204);
+    border-radius: 10px;
+}
+
+.conteiner{
+    width: 70%;
+    height: 90vh;
+}
+
+.conteinerBurbujas{
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.img{
+    width: 10%;
+    height: fit-content;
+    margin: 5px;
+}
+
+@media (max-width: 800px){
+    .conteiner{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .conteinerBurbujas{
+        width: 60%;
+    }
+}
