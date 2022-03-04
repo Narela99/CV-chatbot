@@ -7,7 +7,7 @@ export default function BurbujaChat({str}){
 
             <img src={yo} alt='yo'className={style.img}></img>
             <div className={style.burbujas}>
-               <h5 className='text-dark'>{str}</h5>
+               <span>{str}</span>
             </div>
 
         </div>

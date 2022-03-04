@@ -4,6 +4,8 @@ import style from '../stylesComponents/inicio.module.css';
 import yo from '../img/yo.PNG'
 import BurbujaEscribiedo from './burbujaEscribiendo';
 import BotonesPreguntas from './botonesPreguntas';
+import BurbujaChat from './burbujaChat';
+import { respuestas } from '../variables/respuestas';
 
 export default function Inicio(){
    const [fetching, setFetching] = useState(true);
@@ -29,14 +31,9 @@ export default function Inicio(){
    return (
       <div className={style.conteiner}>
          
-         <div className={style.conteinerBurbujas}>
-
-            <img src={yo} alt='yo'className={style.img}></img>
-            <div className={style.burbujas}>
-               <h5 className='text-dark'>{presentacion}</h5>
-            </div>
-
-         </div>
+         {respuestas.map (r => {
+            return <BurbujaChat str={r}></BurbujaChat>
+         })}
          {cargando()}
          {preguntas()}
          
