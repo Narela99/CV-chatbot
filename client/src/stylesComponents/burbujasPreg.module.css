@@ -1,0 +1,25 @@
+.conteinerBurbujas{
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px;
+    
+}
+
+.burbujas{
+    width: 90%;
+    background-color: #282c34;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 10px 15px;
+    text-align: initial;
+    font-weight: 600;
+    border-radius: 10px 10px 0px 10px;
+    border: 1px solid rgb(129, 176, 204);
+    color: rgb(129, 176, 204)
+}
+
+.burbujaPreg{
+    display: flex;
+    justify-content: flex-end;
+}
