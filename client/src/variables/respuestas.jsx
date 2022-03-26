@@ -6,7 +6,7 @@ export const presentacion = "Hola! Armé este ChatBot con la intención de armar
 
 export const estudios = "Actualmente me encuentro estudiando Profesorado de Matematica, voy por el 3er año de la carrera. En 2020-2021 hice un bootcamp y me recibi de desarrolladora FullStack, y me gustaria seguir ejerciciendo como desarrolladora.  "
 
-export const fortalezas = "Una de mis fortaleza es mi memoria! tengo la capacidad de acordarme muchas cosas. Soy sociable, aunque al principio un poco timida. Me gustan los cambios, hacer, aprender cosas nuevas y me adapto muy rapido."
+export const fortalezas = "Una de mis fortaleza es mi memoria! Tengo la capacidad de recordar muchas cosas. Soy sociable, aunque al principio un poco timida. Me gustan los cambios, hacer, aprender cosas nuevas y me adapto muy rapido."
 
 export const futuro = "Creo que 5 años es mucho tiempo para poder imaginarme como me veo. Siento que la vida cambia constantemente y por eso me gusta planear a corto plazo, y en un futuro cercano me gustaría poder estar creciendo profesionalmente en un equipo que me aporte mas confianza, seguridad y enseñanzas nuevas. Y quien sabe, en 2 o 3 años estar recibida de profesora. Y espero algun día poder combinar mi profesorado con la programación, siento que hacen un buen conjunto! "
 
