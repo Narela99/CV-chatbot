@@ -36,7 +36,7 @@ export default function FormContact(){
                 </div>
                 <div className="modal-body">
                 <form onSubmit={enviar} id="miForm" >
-                    <div claclassNamess="form-floating mb-3">
+                    <div className="form-floating mb-3">
                         <input type="text" className="form-control" name="from_name" id="floatingInput" placeholder='Nombre'/>
                         <label for="floatingInput">Nombre</label>
                     </div>
