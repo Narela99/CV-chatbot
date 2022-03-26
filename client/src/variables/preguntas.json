@@ -5,6 +5,6 @@
     {"preg": "Fortalezas", "estado": true},
     {"preg": "Tecnologias", "estado": true},
     {"preg": "Proyectos", "estado": false},
-    {"preg": "Contacto", "estado": true}
+    {"preg": "Contacto", "estado": false}
 
 ]}

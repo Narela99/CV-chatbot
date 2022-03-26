@@ -1,20 +1,25 @@
 import p from '../variables/preguntas.json'
 import {estudios, fortalezas, contacto, futuro, tecnologias} from '../variables/respuestas'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BurbujaEscribiedo from './burbujaEscribiendo';
 import BurbujaChat from './burbujaChat';
 import { respuestas } from '../variables/respuestas';
 import BurbujaPreg from './burbujaPreg';
 import styles from '../stylesComponents/inicio.module.css'
+import FormContact from './formContact';
+
 
 export default function BotonesPreguntas(){
     const [resp, setResp]= useState(false)
     const [texto, setTexto] = useState('')
     const [preg, setPreg] =useState(true)
     const [fetching, setFetching] = useState(false);
-
-
+    const [contador, setContador] = useState(0);
+    // var contador = 0;
+    
     function tocar(str){
+        setContador(contador +1)
+        console.log(contador)
         respuestas.push(str)
         setFetching(true)
         setPreg(false)
@@ -109,17 +114,37 @@ export default function BotonesPreguntas(){
         
     }
 
+    function contact(){
+
+        if(contador === 4 ){
+            
+            p.preguntas.forEach(obj => {
+                if(obj.preg === "Contacto"){
+                    obj.estado = true
+                }
+            })
+            return (
+                <BurbujaChat str="Si llegaste hasta aca y te gusto mi perfil, contactame!"/>
+            )
+        }
+    }
+        
+        
+    
+
+
     return(
         <div className={styles.conteiner2}>
             {respuestass()}
             {cargando()}
+            {contact()}
             {/* {resp ? <BurbujaChat str={texto}/>: null} */}
             {preg && p.preguntas.map((pr, i) => {
                 if(pr.estado){
                     return <input type="button" className="btn btn-outline-secondary" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)} style={{margin:10}}/>
                 }
             })}
-
+            
         </div>
     )
 }

@@ -1,0 +1,11 @@
+.boton{
+    background-color: transparent;
+    color: green;
+    border: none;
+}
+
+.cruz{
+    display: flex;
+    justify-content: end;
+    margin: 0%;
+}
