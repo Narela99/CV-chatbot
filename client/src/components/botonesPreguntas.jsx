@@ -19,7 +19,6 @@ export default function BotonesPreguntas(){
     
     function tocar(str){
         setContador(contador +1)
-        console.log(contador)
         respuestas.push(str)
         setFetching(true)
         setPreg(false)
@@ -43,7 +42,6 @@ export default function BotonesPreguntas(){
     }
 
     function respuesta(str){
-        console.log(str)
         if(str === "¿Que hay de tus estudios?"){
             setResp(true)
             p.preguntas.forEach(obj => {
@@ -138,10 +136,9 @@ export default function BotonesPreguntas(){
             {respuestass()}
             {cargando()}
             {contact()}
-            {/* {resp ? <BurbujaChat str={texto}/>: null} */}
             {preg && p.preguntas.map((pr, i) => {
                 if(pr.estado){
-                    return <input type="button" className="btn btn-outline-secondary" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)} style={{margin:10}}/>
+                    return <input type="button" className="btn btn-outline-secondary m-2" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)}/>
                 }
             })}
             
