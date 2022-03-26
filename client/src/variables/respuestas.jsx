@@ -4,7 +4,7 @@ export const sobreMi= "Bueno primero me presento, me llamo Narela un gusto! Soy 
 
 export const presentacion = "Hola! Armé este ChatBot con la intención de armar un CV mas dinámico, que sea mas amigable como una charla, y poder mostrar un mini proyecto realizado por mi!"
 
-export const estudios = "Actualmente me encuentro estudiando Profesorado de Matematica, voy por el 3er año de la carrera. En 2020-2021 hice un bootcamp y me recibi de desarrolladora FullStack, y me gustaria seguir ejerciciendo como desarrolladora.  "
+export const estudios = "Actualmente me encuentro estudiando Profesorado de Matemática, voy por el 3er año de la carrera. En 2020-2021 hice un bootcamp y me recibi de desarrolladora FullStack, y me gustaria seguir ejerciciendo como desarrolladora.  "
 
 export const fortalezas = "Una de mis fortaleza es mi memoria! Tengo la capacidad de recordar muchas cosas. Soy sociable, aunque al principio un poco timida. Me gustan los cambios, hacer, aprender cosas nuevas y me adapto muy rapido."
 

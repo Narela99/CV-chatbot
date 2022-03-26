@@ -1,13 +1,12 @@
 import{ init } from '@emailjs/browser';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-import style from '../stylesComponents/formContact.module.css'
 init("-dVO_7sZI7JMYNHYW");
 
-export default function FormContact(){
-    const[enviado, setEnviado] = useState(false)
-    
 
+export default function FormContact(){
+    
+    const[enviado, setEnviado] = useState(false);
     function enviar(e){
         e.preventDefault();
         emailjs.sendForm('service_z6r1mqt', 'template_wwi5i71', e.target)

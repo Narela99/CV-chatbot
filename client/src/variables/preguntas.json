@@ -3,7 +3,7 @@
     {"preg": "¿Como te ves en 5 años?", "estado": true},
     {"preg": "Debilidades", "estado": false},
     {"preg": "Fortalezas", "estado": true},
-    {"preg": "Tecnologias", "estado": true},
+    {"preg": "Tecnologías", "estado": true},
     {"preg": "Proyectos", "estado": false},
     {"preg": "Contacto", "estado": false}
 

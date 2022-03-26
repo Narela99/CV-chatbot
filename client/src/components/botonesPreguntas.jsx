@@ -1,21 +1,17 @@
 import p from '../variables/preguntas.json'
 import {estudios, fortalezas, contacto, futuro, tecnologias} from '../variables/respuestas'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BurbujaEscribiedo from './burbujaEscribiendo';
 import BurbujaChat from './burbujaChat';
 import { respuestas } from '../variables/respuestas';
 import BurbujaPreg from './burbujaPreg';
 import styles from '../stylesComponents/inicio.module.css'
-import FormContact from './formContact';
 
 
 export default function BotonesPreguntas(){
-    const [resp, setResp]= useState(false)
-    const [texto, setTexto] = useState('')
     const [preg, setPreg] =useState(true)
     const [fetching, setFetching] = useState(false);
     const [contador, setContador] = useState(0);
-    // var contador = 0;
     
     function tocar(str){
         setContador(contador +1)
@@ -43,7 +39,6 @@ export default function BotonesPreguntas(){
 
     function respuesta(str){
         if(str === "¿Que hay de tus estudios?"){
-            setResp(true)
             p.preguntas.forEach(obj => {
                 if(obj.preg === "¿Que hay de tus estudios?"){
                     obj.estado = false
@@ -53,7 +48,6 @@ export default function BotonesPreguntas(){
             setPreg(true)
         }
         else if(str === "Fortalezas"){
-            setResp(true)
             p.preguntas.forEach(obj => {
                 if(obj.preg === "Fortalezas"){
                     obj.estado = false
@@ -64,36 +58,33 @@ export default function BotonesPreguntas(){
             
         }
         else if(str === "Contacto"){
-            setResp(true)
-            setPreg(true)
             p.preguntas.forEach(obj => {
                 if(obj.preg === "Contacto"){
                     obj.estado = false
                 }
             })
             respuestas.push(contacto)
+            setPreg(true)
             
         }
         else if(str === "¿Como te ves en 5 años?"){
-            setResp(true)
-            setPreg(true)
             p.preguntas.forEach(obj => {
                 if(obj.preg === "¿Como te ves en 5 años?"){
                     obj.estado = false
                 }
             })
             respuestas.push(futuro)
+            setPreg(true)
             
         }
         else if(str === "Tecnologias"){
-            setResp(true)
-            setPreg(true)
             p.preguntas.forEach(obj => {
                 if(obj.preg === "Tecnologias"){
                     obj.estado = false
                 }
             })
             respuestas.push(tecnologias)
+            setPreg(true)
             
         }
         
@@ -126,6 +117,17 @@ export default function BotonesPreguntas(){
             )
         }
     }
+
+    // function mensFinal(){
+
+    //     if(final){
+    //         return (
+    //             <BurbujaChat str="Gracias por contactarme! A la brevedad estare respondiendo, saludos!"/>
+    //         )
+    //     }
+    // }
+
+    
         
         
     
@@ -141,7 +143,6 @@ export default function BotonesPreguntas(){
                     return <input type="button" className="btn btn-outline-secondary m-2" value={pr.preg} key={i} onClick={() =>tocar(pr.preg)}/>
                 }
             })}
-            
         </div>
     )
 }
