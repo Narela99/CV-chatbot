@@ -20,7 +20,7 @@ export default function FormContact(){
 
     return (
         <div>
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" className="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Mandar mensaje directo
             </button>
 

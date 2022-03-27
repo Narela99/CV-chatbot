@@ -77,9 +77,9 @@ export default function BotonesPreguntas(){
             setPreg(true)
             
         }
-        else if(str === "Tecnologias"){
+        else if(str === "Tecnologías"){
             p.preguntas.forEach(obj => {
-                if(obj.preg === "Tecnologias"){
+                if(obj.preg === "Tecnologías"){
                     obj.estado = false
                 }
             })
@@ -105,7 +105,7 @@ export default function BotonesPreguntas(){
 
     function contact(){
 
-        if(contador === 4 ){
+        if(contador === 4 && !fetching ){
             
             p.preguntas.forEach(obj => {
                 if(obj.preg === "Contacto"){
@@ -126,11 +126,6 @@ export default function BotonesPreguntas(){
     //         )
     //     }
     // }
-
-    
-        
-        
-    
 
 
     return(
