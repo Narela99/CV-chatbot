@@ -81,22 +81,29 @@
 }
 
 .img{
-    width: 10%;
-    height: fit-content;
+    width: 40px;
+    height: 40px;
     margin: 5px;
 }
+
+/* @media (max-width: 800px){
+    .conteiner{
+        width: 100%;
+    }
+} */
 
 @media (max-width: 800px){
     .conteiner{
         width: 100%;
     }
-}
-
-@media (max-width: 600px){
     .conteinerBurbujas{
         width: 80%;
     }
     .burbujas{
         font-size: 17px;
+    }
+    .img{
+        width: 30px;
+        height: 30px;
     }
 }
